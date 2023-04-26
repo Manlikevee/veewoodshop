@@ -1117,6 +1117,7 @@ footer{
   text-align: start !important;
   font-weight: 300;
   font-size: 14px;
+  color: var(--granite-gray) !important;
 }
 .descflex{
   width: 100%;
@@ -1380,7 +1381,11 @@ height: 100%;
   }
 
   .product .section-title{
-    color: var(--body-color) !important;
+    color: var(--granite-gray) !important;
+  }
+
+  .productdesc{
+    color: var(--granite-gray) !important;
   }
 
   .imagesectionfixed{
@@ -1407,5 +1412,12 @@ height: 100%;
 .newsletter-card {
   background-color: var(--header-bg-color) !important;
   height: 223px;
+}
+
+.productdetail{
+  text-align: start !important;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--granite-gray) !important;
 }
 }
