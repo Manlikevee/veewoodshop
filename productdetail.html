@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>Woodex - Get Quality Furniture</title>
+  <meta name="title" content="Woodex - Get Quality Furniture">
+  <meta name="description" content="This is an eCommerce html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-product-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-product-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-product-3.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-product-4.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-product-5.jpg">
+
+</head>
+
+<body id="top" onload="checkCookie()">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="input-wrapper">
+        <input type="search" name="search" placeholder="Search Anything..." class="input-field">
+
+        <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+      </div>
+
+      <a href="/" class="logo">Woodex</a>
+
+      <div class="header-action">
+
+
+        <button class="header-action-btn" aria-label="user" onclick="updateCookie()">
+          <ion-icon name="moon-outline" aria-hidden="true"> </ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="user">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="favorite list">
+          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <button class="header-action-btn" aria-label="cart">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- 
+    - #SIDEBAR
+  -->
+
+  <div class="sidebar" data-navbar>
+
+    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+      <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
+
+    <div class="wrapper">
+
+      <ul class="sidebar-list">
+
+        <li>
+          <p class="sidebar-list-title">Language</p>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">English</a>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">French</a>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">Arabric</a>
+        </li>
+
+      </ul>
+
+      <ul class="sidebar-list">
+
+        <li>
+          <p class="sidebar-list-title">Currency</p>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">USD - US Dollar</a>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">Euro</a>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-link">Pound</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+
+        <li class="navbar-item">
+          <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#about" class="navbar-link" data-nav-link>About</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#product" class="navbar-link" data-nav-link>Product</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#blog" class="navbar-link" data-nav-link>Blogs</a>
+        </li>
+
+
+      </ul>
+    </nav>
+
+    <ul class="contact-list">
+
+      <li>
+        <p class="contact-list-title">Contact Us</p>
+      </li>
+
+      <li class="contact-item">
+        <address class="address">
+          69 Halsey St, Ny 10002, New York, United States
+        </address>
+      </li>
+
+      <li class="contact-item">
+        <a href="mailto:support.center@woodex.co" class="contact-link">support.center@woodex.co</a>
+      </li>
+
+      <li class="contact-item">
+        <a href="tel:00001235567890" class="contact-link">(0000) 1235 567890</a>
+      </li>
+
+    </ul>
+
+    <div class="social-wrapper">
+
+      <p class="social-list-title">Follow US On Socials</p>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-tumblr"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="overlay" data-overlay data-nav-toggler></div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+
+
+
+
+
+
+      <!-- 
+        - #PRODUCTS
+      -->
+      <br>
+      <br>
+      <br>
+      <div class="squarebox">
+
+      </div>
+      <section class="section product" id="product" aria-label="product">
+
+
+        <div class="container">
+
+
+          <div class="productflex">
+            <div class="imagesectionfixed">
+              <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+            </div>
+            <div class="textsectionflow">
+              <div class="averagerating "></div>
+              <div class="productname h3 section-title">Aristide Petrilli Decorative Object</div>
+              <div class="productprice h2 section-text">$340.00</div>
+              <div class="productdetail section-title">Enhance your style with this printed top, which is designed with three-quarter sleeves and a round neckline. Adding to the style quotient, this top is detailed with a schiffli detailed..</div>
+
+              <div class="productline"></div>
+
+
+              <div class="productquickdescription">
+                <div class="descflex">
+                  <div class="desctitle">Type</div>
+                  <div class="descvalue">Pottery and Glass Crafts</div>
+                </div>
+
+                <div class="descflex">
+                  <div class="desctitle">Type</div>
+                  <div class="descvalue">Mojarto</div>
+                </div>
+
+
+                <div class="descflex">
+                  <div class="desctitle">Type</div>
+                  <div class="descvalue">NHFL6</div>
+                </div>
+
+
+                <div class="descflex">
+                  <div class="desctitle">Type</div>
+                  <div class="descvalue">Out Of Stock</div>
+                </div>
+
+                
+
+                <div class="descflex">
+                  <div class="desctitle">Type</div>
+                  <div class="descvalue">Accessories, Cotton, Fashion, Summer, Vintage,
+
+                    
+                  </div>
+                </div>
+
+
+                <p class="qty">
+                  <label for="qty">Quantity:</label>
+                  <button class="qtyminus" aria-hidden="true">&minus;</button>
+                  <input type="tel" name="qty" id="qty" min="1" max="10" step="1" value="1">
+                  <button class="qtyplus" aria-hidden="true">&plus;</button>
+                </p>
+
+
+                <div class="addtocartbutton">
+                  <button>
+                    Add To Cart
+                  </button>
+                </div>
+
+        
+
+
+                
+              </div>
+
+
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+
+          <div class="tabs">
+            <ul class="tab-links">
+              <li class="active"><a href="#tab1">Description</a></li>
+              <li><a href="#tab2">Additional information</a></li>
+              <li><a href="#tab3">Reviews</a></li>
+            </ul>
+          
+            <div class="tab-content">
+              <div id="tab1" class="tab active">
+                <p>  
+                   <div class="productdesc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, quibusdam dignissimos laudantium eos laborum maiores excepturi totam deserunt illum similique aliquid ea tenetur cumque consequatur? Laboriosam quisquam voluptatum ipsum similique ut natus autem suscipit beatae est, fuga repellendus sunt, ex expedita quam optio. Magnam quibusdam ullam eos id quos 
+                  
+                
+                  <ul class="jss6347">
+                    <br>
+                    <li>Type : Casual Tops</li>
+                    <li>Design : Printed</li>
+                    <li>Neckline : Round Neck</li>
+                    <li>Style : Casual</li>
+                    <li>Sleeve Length : 3/4th Sleeves</li>
+                    <li>Fabric : Cotton Blend</li>
+                    <li>Care Instructions : Machine Wash</li>
+                    <li>Model Wears : Size S,has Height 5'7" and Chest 33"</li>
+                    <li>Return Policy : This product is returnable within 30 days of delivery</li>
+                    <li>Product : Top</li>
+                    <li>Country of Origin : Germany</li>
+                    <li>Net Quantity : 350</li>
+                    </ul>
+                </div>
+      </p>
+              </div>
+              <div id="tab2" class="tab">
+                <p>Content for Tab 2 goes here.</p>
+              </div>
+              <div id="tab3" class="tab">
+                <p>Content for Tab 3 goes here.</p>
+              </div>
+            </div>
+          </div>
+          
+
+       
+
+        </div>
+      </section>
+
+      <br>
+      <h2 class="container h2 section-title">
+        Related products
+      </h2>
+     
+      <br>
+    
+          
+<div class="container">
+  <div id="owl-carousel" class="owl-carousel owl-theme">
+
+    <div class="item">
+      <div class="product-card">
+
+        <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+            class="img-cover">
+
+          <ul class="card-action-list">
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+          </ul>
+        </a>
+
+        <div class="card-content">
+          <h3 class="h3">
+            <a href="#" class="card-title">Dark Green Jug</a>
+          </h3>
+
+          <div class="card-price">
+            <data class="price" value="17.10">$17.10</data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="item">
+      <div class="product-card">
+
+        <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+          <img src="https://images.unsplash.com/photo-1549187774-b4e9b0445b41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+            class="img-cover">
+
+          <ul class="card-action-list">
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+          </ul>
+        </a>
+
+        <div class="card-content">
+          <h3 class="h3">
+            <a href="#" class="card-title">Dark Green Jug</a>
+          </h3>
+
+          <div class="card-price">
+            <data class="price" value="17.10">$17.10</data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="item">
+      <div class="product-card">
+
+        <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+          <img src="https://images.unsplash.com/photo-1512212621149-107ffe572d2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+            class="img-cover">
+
+          <ul class="card-action-list">
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+          </ul>
+        </a>
+
+        <div class="card-content">
+          <h3 class="h3">
+            <a href="#" class="card-title">Dark Green Jug</a>
+          </h3>
+
+          <div class="card-price">
+            <data class="price" value="17.10">$17.10</data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="item">
+      <div class="product-card">
+
+        <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+          <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80q=80" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+            class="img-cover">
+
+          <ul class="card-action-list">
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+          </ul>
+        </a>
+
+        <div class="card-content">
+          <h3 class="h3">
+            <a href="#" class="card-title">Dark Green Jug</a>
+          </h3>
+
+          <div class="card-price">
+            <data class="price" value="17.10">$17.10</data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="product-card">
+
+        <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=658&q=80" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+            class="img-cover">
+
+          <ul class="card-action-list">
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+            <li>
+              <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </li>
+
+          </ul>
+        </a>
+
+        <div class="card-content">
+          <h3 class="h3">
+            <a href="#" class="card-title">Dark Green Jug</a>
+          </h3>
+
+          <div class="card-price">
+            <data class="price" value="17.10">$17.10</data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+<br>
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter" aria-label="newsletter">
+        <div class="container">
+
+          <div class="newsletter-card">
+
+            <div class="card-content">
+              <h2 class="h2 section-title">Our Newsletter</h2>
+
+              <p class="section-text">
+                Subscribe our newsletter and get discount 50% off
+              </p>
+            </div>
+
+            <form action="" class="card-form">
+              <input type="email" name="email_address" placeholder="Your email address" required class="email-field">
+
+              <button type="submit" class="newsletter-btn" aria-label="subscribe">
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <script>
+    var input = document.querySelector('#qty');
+var btnminus = document.querySelector('.qtyminus');
+var btnplus = document.querySelector('.qtyplus');
+
+if (input !== undefined && btnminus !== undefined && btnplus !== undefined && input !== null && btnminus !== null && btnplus !== null) {
+	
+	var min = Number(input.getAttribute('min'));
+	var max = Number(input.getAttribute('max'));
+	var step = Number(input.getAttribute('step'));
+
+	function qtyminus(e) {
+		var current = Number(input.value);
+		var newval = (current - step);
+		if(newval < min) {
+			newval = min;
+		} else if(newval > max) {
+			newval = max;
+		} 
+		input.value = Number(newval);
+		e.preventDefault();
+	}
+
+	function qtyplus(e) {
+		var current = Number(input.value);
+		var newval = (current + step);
+		if(newval > max) newval = max;
+		input.value = Number(newval);
+		e.preventDefault();
+	}
+		
+	btnminus.addEventListener('click', qtyminus);
+	btnplus.addEventListener('click', qtyplus);
+  
+} // End if test
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Woodex</a>
+
+          <ul>
+
+            <li class="footer-list-item">
+              <ion-icon name="location-sharp" aria-hidden="true"></ion-icon>
+
+              <address class="address">
+                Woodex, Chicago, USA 2022
+              </address>
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="call-sharp" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+1234567890" class="footer-link">+1234567890</a>
+            </li>
+
+            <li>
+              <ul class="social-list">
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-tumblr"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help & Information</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help & Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Returns & Refunds</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Online Stores</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">About Us</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">What We Do</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ Page</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Newsletter</p>
+
+          <form action="" class="footer-form">
+            <input type="email" name="email_address" placeholder="Your email address" required class="email-field">
+
+            <button type="submit" class="footer-form-btn">
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <div class="wrapper">
+
+            <a href="#" class="footer-link">Term & Condition</a>
+            <a href="#" class="footer-link">Policy</a>
+            <a href="#" class="footer-link">Map</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2022 All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>.
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/script2.js" defer></script>
+  <!-- 
+    - ionicon link
+  -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js'></script><
+
+</body>
+
+</html>

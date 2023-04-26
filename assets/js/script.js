@@ -1,3 +1,4 @@
+
 'use strict';
 
 
@@ -88,16 +89,15 @@ addEventOnElem(filterBtns, "click", filter);
 
 
 
-function menuToggle(){
-  console.log('it clicked')
+function menuToggle() {
+  console.log('it clicked');
   const toggleMenu = document.querySelector('.header-menu');
-  toggleMenu.classList.toggle('navactive')
-
+  toggleMenu.classList.toggle('navactive');
 }
 
-function setCookie(cname,cvalue,exdays) {
+function setCookie(cname, cvalue, exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   let expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
@@ -106,7 +106,7 @@ function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
+  for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
@@ -119,31 +119,35 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
- 
   const bod = document.querySelector('body');
   let user = getCookie("username");
-  console.log(user)
+  console.log(user);
   if (user == "dark-mode") {
     bod.classList.add('dark-mode');
   } else {
     //  user = prompt("Please enter your name:","");
-     bod.classList.remove('dark-mode');
-     
+    bod.classList.remove('dark-mode');
   }
-}checkCookie()
+}
+checkCookie();
 
-function updateCookie(){
+function updateCookie() {
   const bod = document.querySelector('body');
+  let user = getCookie("username");
   const man = bod.classList.contains('dark-mode');
   if (bod.classList.contains('dark-mode')) {
-    bod.classList.remove('dark-mode')
-    user = 'lightmode'
+    bod.classList.remove('dark-mode');
+    user = 'lightmode';
     setCookie("username", user, 30);
-
   } else {
     bod.classList.add('dark-mode');
-    console.log('yay')
-    user = 'dark-mode'
+    console.log('yay');
+    user = 'dark-mode';
     setCookie("username", user, 30);
   }
 }
+
+
+
+
+

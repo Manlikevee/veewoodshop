@@ -19,7 +19,10 @@
   /**
    * colors
    */
+   --ebeb: #ebebeb;
    --body-color: #2f2f33 ;
+   --body-color2: #3f3f55 ;
+   --hvc: #1c1c24;
  --bg-color: #2f2f33 ;
  --header-bg-color: #fff;
  --theme-bg-color: #f3f3f3;
@@ -81,6 +84,9 @@
 
 
 .dark-mode{
+  --ebeb: #1c1c24;
+  --hvc: #c1c1ca;
+  --body-color2:  rgb(208, 208, 208) ;
   --body-color: rgb(242, 241, 241) ;
   --header-bg-color: #1c1c24;
   --red-orange-color-wheel: hsl(17, 96%, 48%);
@@ -211,6 +217,9 @@ body.active { overflow: hidden; }
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-gray);
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-cover {
@@ -718,7 +727,7 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
 
 .newsletter {
   --section-padding: 20px;
-  background-color: var(--cultured);
+
   color: var(--smokey-black);
 }
 
@@ -733,7 +742,8 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
 .newsletter .card-form { position: relative; }
 
 .newsletter-card .email-field {
-  background-color: var(--white);
+  background-color: var(--theme-bg-color);
+  color: var(--body-color);
   padding-block: 14px;
   padding-inline: 20px 50px;
   outline: 3px solid transparent;
@@ -741,17 +751,40 @@ a.card-meta-text:is(:hover, :focus) { color: var(--tan-crayola); }
   transition: var(--transition-1);
 }
 
-.newsletter-card .email-field:focus { outline-color: var(--black_25); }
+.newsletter-card .email-field:focus { outline-color: var(--body-color2); }
 
 .newsletter-btn {
   position: absolute;
+  color: var(--body-color);
   top: 0;
   right: 0;
   bottom: 0;
   padding-inline: 20px;
 }
 
+.addtocartbutton{
+  margin-top: 10px;
 
+}
+
+.addtocartbutton button{
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: var(--header-bg-color);
+  color: var(--body-color);
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow);
+  padding: 12px;
+  transition: 0.4s;
+
+  font-weight: 700;
+}
+
+.addtocartbutton button:hover{
+  background-color: var(--hvc);
+  color: white;
+}
 
 
 
@@ -1024,13 +1057,207 @@ footer{
 
 .subhero{
   height: 100vh;
-  background-image: url('https://unsplash.com/photos/Cn87TISYij8/download?ixid=MnwxMjA3fDB8MXxhbGx8MjN8fHx8fHwyfHwxNjgyNDMzOTEz&force=true&w=1920');
+  background-image:url('../images/Rectangle\ 10\ \(2\).png'), url('https://unsplash.com/photos/Cn87TISYij8/download?ixid=MnwxMjA3fDB8MXxhbGx8MjN8fHx8fHwyfHwxNjgyNDMzOTEz&force=true&w=1920');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.productflex{
+  display: flex;
+  width: 100%;
+  gap: 30px;
+}
 
+.imagesectionfixed{
+  position: sticky;
+  top: 20%;
+  width: 100%;
+  padding: 6px;
+  height: fit-content;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.imagesectionfixed img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.textsectionflow{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+footer{
+  background-color: var(--header-bg-color);
+  color: var(--body-color);
+}
+
+.squarebox{
+  height: 25vh;
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 6px;
+  background-color: var(--ebeb);
+}
+.productname{
+  text-align: start !important;
+}
+
+.productdetail{
+  text-align: start !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+.descflex{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.desctitle{
+  width: 15%;
+}
+
+.descvalue{
+  width: 100%;
+}
+
+.productquickdescription{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--body-color2);
+  font-size: 15px;
+}
+
+
+.qty button {
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  touch-action: manipulation;
+  display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.qty label{
+  width: 15%;
+  text-align: start;
+}
+
+/* End Reset for the demo */
+/* Sass Config */
+/* Contrast : 7.2:1 */
+/* End Sass Config */
+.qty {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  text-align: center;
+  align-items: center;
+}
+
+.qty input {
+  width: 7rem;
+  height: 4rem;
+  font-size: 1.3rem;
+  color: var(--body-color);
+  background: var(--header-bg-color);
+  outline: none;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.qty button {
+  width: 4rem;
+  height: 4rem;
+  color: var(--body-color);
+  font-size: 2rem;
+  background: var(--header-bg-color);
+  border: 1px solid #ccc;
+}
+.qty button.qtyminus {
+  margin-right: 0.1rem;
+}
+.qty button.qtyplus {
+  margin-left: 0.1rem;
+}
+
+.tabs {
+  display: block;
+  margin: 0 auto;
+}
+
+.tab-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tab-links li a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  background-color: #f7f7f7;
+  text-decoration: none;
+}
+
+.tab-links li.active a {
+  border-bottom-color: transparent;
+}
+
+.tab-content {
+  margin-top: 0px;
+  padding-top: 20px;
+  font-size: 15px;
+    line-height: 26px;
+    font-weight: 300;
+  color: var(--body-color);
+
+  border: 1px solid var(--ebeb);
+  border-top: none;
+  padding: 10px;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+
+
+.item {
+  align-items: center;
+width: 100%;
+max-height: 700px;
+height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
 
 /**
  * responsive for large than 992px screen
@@ -1142,4 +1369,43 @@ footer{
 
   .product-list { grid-template-columns: repeat(4, 1fr); }
 
+}
+
+@media screen and (max-width:900px) {
+
+  .productflex{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product .section-title{
+    color: var(--body-color) !important;
+  }
+
+  .imagesectionfixed{
+    position: relative;
+  }
+  .imagesectionfixed img{
+    max-height: 400px;
+  }
+
+  .newsletter-card {
+    background-color: var(--header-bg-color) !important;
+  }
+  .squarebox{
+    height: 19vh;
+  }
+  .tab-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.newsletter-card {
+  background-color: var(--header-bg-color) !important;
+  height: 223px;
+}
 }
