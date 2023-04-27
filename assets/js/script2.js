@@ -23,6 +23,36 @@ $('#owl-carousel').owlCarousel({
         }
       })
   
+
+
+      $('#owl-carousel2').owlCarousel({
+        loop: true,
+        margin: 3,
+        dots: true,
+        nav: true,
+              autoplay: true,
+            autoPlaySpeed: 1000,
+            autoPlayTimeout: 1000,
+            autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 3
+              },
+              1300: {
+                items: 3
+              },
+              1600: {
+                items: 3
+              }
+            }
+          })
+      
+
+
+      
   
   
   const tabLinks = document.querySelectorAll(".tab-links li a");
@@ -52,3 +82,4 @@ $('#owl-carousel').owlCarousel({
   
   
   
+

@@ -23,6 +23,8 @@
    --body-color: #2f2f33 ;
    --body-color2: #3f3f55 ;
    --hvc: #1c1c24;
+   --filta:  brightness(1);
+
  --bg-color: #2f2f33 ;
  --header-bg-color: #fff;
  --theme-bg-color: #f3f3f3;
@@ -86,6 +88,7 @@
 .dark-mode{
   --ebeb: #1c1c24;
   --hvc: #c1c1ca;
+  --filta:  brightness(0.6);
   --body-color2:  rgb(208, 208, 208) ;
   --body-color: rgb(242, 241, 241) ;
   --header-bg-color: #1c1c24;
@@ -167,6 +170,202 @@ body {
   color: var(--black);
   font-size: 1.6rem;
   line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
+}
+
+
+.loginform{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.inputflex{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.label{
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.inputflex input{
+  border: 1px solid rgb(56, 56, 56);
+  padding: 7px;
+  border-radius: 4px;
+  outline: none;
+  color: var(--body-color);
+  font-size: 14px;
+  margin-top: 5px;
+}
+.label button{
+  background-color: black;
+  border-radius: 4px;
+  transition: 0.4s;
+  width: 100%;
+  padding: 8px;
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  
+}
+
+.label button:hover{
+background-color: #121218;
+}
+.inputflex label{
+  color: var(--body-color);
+  font-size: 15px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+
+.formbox{
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--header-bg-color);
+  padding: 25px;
+ 
+}
+
+.otherside{
+  width: 90%;
+  background-color: var(--tan-crayola);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 9px;
+}
+.socialmediacontainer {
+  width: 100%;
+
+}
+
+
+.socialmedia{
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 109999999999999999999999999999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+
+
+/* Close button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  position: absolute;
+  top: 6%;
+  left: 90%;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  font-size: 35px;
+  text-align: center;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.bot{
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+padding: 15px;
+  background-color:  var(--theme-bg-color);
+  box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%), 0 5px 15px 0 rgb(0 0 0 / 5%);
+
+  width: 100%;
+font-size: 14px;
+color: var(--body-color);
+cursor: pointer;
+}
+
+.icontext{
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(253, 253, 253);
+  font-weight: 300;
+  margin: 10px 0px 0px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bot img{
+  max-height: 20px;
+  vertical-align: middle;
+  margin-right: 7px;
+  object-fit: contain;
+}
+.totalformbox{
+  padding: 5px;
+  margin-top: 30px;
+  height: fit-content;
+  width: 60%;
+  display: flex;
+  border-radius: 9px;
+  background-color: var(--header-bg-color);
+}
+
+
+.txtc{
+  font-size: small;
+  color: var(--spanish-gray);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.colored{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
 }
 
 button.header-action-btn {
@@ -246,6 +445,19 @@ body.active { overflow: hidden; }
 }
 .img-holder{
   border-radius: 9px;
+  
+  filter: var(--filta);
+  transition: 0.5s;
+
+}
+
+
+.img-holder:hover{
+  border-radius: 9px;
+  
+  filter: brightness(1);
+  transition: 0.5s;
+  color: black !important;
 }
 .has-before {
   position: relative;
@@ -256,10 +468,92 @@ body.active { overflow: hidden; }
   content: "";
   position: absolute;
 }
+.about .section-title{
+  color: var(--smokey-black);
+}
+
+.about .section-text{
+  color: var(--smokey-black);
+}
+.productflex{
+  color: var(--smokey-black);
+}
 
 
+.tablestyle{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tablebox{
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+.cimg{
+  width: 25%;
+}
 
+.cartdesc{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
+.cartprice{
+  width: 20%;
+  color: var(--tan-crayola);
+}
+
+.checkoutbutton{
+  width: 100%;
+
+}
+
+.checkoutbutton button{
+  padding: 10px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  width: 100%;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.checkoutbutton button:hover{
+  background-color: #1c1c24;
+}
+
+.cartdel{
+  margin-left: auto;
+}
+.cartimg{
+  width: 100px;
+  height: 100px;
+}
+
+.cartimg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.tablebox:first-child{
+  display: block;
+}
+.tablebox:last-child{
+  border: 1px solid #ccc;
+
+}
+
+.cartamt{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tan-crayola);
+}
 
 /*-----------------------------------*\
   #HEADER
@@ -445,7 +739,9 @@ body.active { overflow: hidden; }
   right: 30px;
 }
 
-.hero-card :is(.card-title, .card-text) { font-weight: var(--fw-500); }
+.hero-card :is(.card-title, .card-text) { font-weight: var(--fw-500);
+color: var(--body-color);
+}
 
 .hero-card .card-title {
   font-size: var(--fs-3);
@@ -1371,13 +1667,27 @@ height: 100%;
   .product-list { grid-template-columns: repeat(4, 1fr); }
 
 }
-
+@media screen and (max-width:1140px){
+  .totalformbox {
+    padding: 5px;
+    margin-top: 30px;
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    border-radius: 9px;
+    background-color: var(--header-bg-color);
+}
+}
 @media screen and (max-width:900px) {
 
   .productflex{
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .otherside{
+    display: none;
   }
 
   .product .section-title{
@@ -1420,4 +1730,19 @@ height: 100%;
   font-size: 14px;
   color: var(--granite-gray) !important;
 }
+}
+
+@media screen and (max-width:590px) {
+  .bot span{
+    display: none;
+  }
+
+  .close{
+    left:77%;
+  }
+
+  .totalformbox{
+    width: 95%;
+  }
+  
 }
